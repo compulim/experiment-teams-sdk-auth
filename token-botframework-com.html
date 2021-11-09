@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title></title>
+    <script src="https://statics.teams.microsoft.com/sdk/v1.4.1/js/MicrosoftTeams.min.js"></script>
+  </head>
+  <body>
+    <p>In <span id="countdown">5</span> seconds, this page will run the following code:</p>
+    <pre>
+microsoftTeams.initialize();
+microsoftTeams.authentication.notifySuccess('123456');</pre
+    >
+    <script type="text/javascript">
+      const run = () => {
+        microsoftTeams.initialize();
+        microsoftTeams.authentication.notifySuccess('123456');
+      };
+
+      let countdown = 5;
+
+      setInterval(() => {
+        document.getElementById('countdown').textContent = --countdown;
+
+        if (countdown <= 0) {
+          run();
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
