@@ -4,11 +4,15 @@
     <script src="https://statics.teams.microsoft.com/sdk/v1.4.1/js/MicrosoftTeams.min.js"></script>
   </head>
   <body>
-    <p>In <span id="countdown">5</span> seconds, this page will run the following code:</p>
+    <p>
+      This page is supposedly from token.botframework.com and it would show a magic code that the end-user could copy.
+    </p>
+    <p>In <span id="countdown">5</span> seconds, this page will run the following code.</p>
     <pre>
 microsoftTeams.initialize();
 microsoftTeams.authentication.notifySuccess('123456');</pre
     >
+    <p>In real world, the code will be executed immediately.</p>
     <script type="text/javascript">
       const run = () => {
         microsoftTeams.initialize();
